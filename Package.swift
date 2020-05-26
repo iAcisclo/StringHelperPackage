@@ -5,6 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "StringHelperPackage",
+    platforms: [
+        SupportedPlatform.iOS(.v13),
+        SupportedPlatform.macOS(.v10_15),
+        SupportedPlatform.watchOS(.v6),
+        SupportedPlatform.tvOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
@@ -24,5 +30,6 @@ let package = Package(
         .testTarget(
             name: "StringHelperPackageTests",
             dependencies: ["StringHelperPackage"]),
+        
     ]
 )
