@@ -2,6 +2,8 @@ import Foundation
 
 public struct StringHelperPackage {
     
+    public init() {}
+    
     public func localizedString(_ string: String) -> String {
         string.localized()
     }
